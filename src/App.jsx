@@ -7,6 +7,7 @@ import PlaceOrder from "./pages/PlaceOrder";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
 import { ToastContainer } from "react-toastify";
+import Verify from "./pages/Verify";
 
 const App = () => {
   const [showLogin, setShowlogin] = useState(false);
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/place-order" element={<PlaceOrder />} />
+        <Route path="/verify" element={<Verify/>} />
       </Routes>
       <Footer />
     </div>

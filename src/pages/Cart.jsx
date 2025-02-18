@@ -3,7 +3,7 @@ import { StoreContext } from "../context/StoreContext";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const { food_list, cartItems, removeFromCart, getTotalCardAmount } = useContext(StoreContext);
+  const { food_list, cartItems, removeFromCart, getTotalCardAmount,url } = useContext(StoreContext);
   const Navigate=useNavigate();
 
   const subtotal = getTotalCardAmount();
@@ -35,7 +35,7 @@ const Cart = () => {
               >
                 {/* Item Image & Name */}
                 <div className="flex items-center space-x-4 w-1/6">
-                  <img src={item.image} alt={item.name} className="w-16 h-16 object-cover rounded-md" />
+                  <img src={url+"/images/"+item.image} alt={item.name} className="w-16 h-16 object-cover rounded-md" />
                   <p className="font-medium">{item.name}</p>
                 </div>
 
